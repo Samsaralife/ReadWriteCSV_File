@@ -22,6 +22,7 @@ public class CRMReadCSV {
 			int acc = 0;
 			String line = reader.readLine();
 			while(line!=null) {
+				
 				File file = new File(FILE_PATH + FILE_NAME + acc + ".csv");
 				@SuppressWarnings("resource")
 				BufferedWriter bWriter = new BufferedWriter(new FileWriter(file,true));
@@ -29,7 +30,7 @@ public class CRMReadCSV {
 				bWriter.write(line);
 				bWriter.newLine();
 				bWriter.close();
-		
+				
 				line = reader.readLine();
 				
 				System.out.println("=========>"+line);
